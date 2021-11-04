@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.Napis2).text = text.toString() + findViewById<TextView>(R.id.Napis1).text.toString()
         }
         findViewById<Button>(R.id.Suma).setOnClickListener{
-            var liczba1 = findViewById<TextView>(R.id.Liczba1).text
-            var liczba2 = findViewById<TextView>(R.id.Liczba2).text
+            var liczba1 = findViewById<TextView>(R.id.Liczba1).text.toString().toInt()
+            var liczba2 = findViewById<TextView>(R.id.Liczba2).text.toString().toInt()
             var wynik = liczba1.toInt() + liczba2.toInt();
-            findViewById<TextView>(R.id.Wynik_sumy).text = wynik.toInt()
+            findViewById<TextView>(R.id.Wynik_sumy).text = wynik.toString();
         }
     }
 }
